@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
 
+
   def index
 
     @posts = current_user.posts.all
+    render layout: "layout_post"
   end
 
   def new
@@ -25,6 +27,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    render layout: "layout_post"
   end
 
   def edit
