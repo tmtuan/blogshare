@@ -1,0 +1,16 @@
+<%= form_for([@post, @post.comments.build]) do |f| %>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name, value: current_user.first_name + " " + current_user.last_name, disabled: true %>
+    </p>
+
+    <p>
+      <%= f.label :body %>
+      <%= f.text_area :body%>
+    </p>
+    <br/>
+    <p>
+      <%= f.submit %>
+    </p>
+
+<% end %>
