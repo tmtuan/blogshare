@@ -43,6 +43,20 @@ h6 {
     position: relative;
     padding-top: 20%;
     padding-bottom: 20%;
+    float: left;
+}
+
+.registration {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    float: right;
+}
+
+.registration > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
 }
 
 .intro-message > h1 {
