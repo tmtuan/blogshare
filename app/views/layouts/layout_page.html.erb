@@ -88,31 +88,45 @@
             <h1>Get started? Sign Up</h1>
             </div>
             <div class="form-bottom">
+              <%= form_for User.new, :html => {multipart: true, :class => 'form-horizontal'} do |f| %>
               <form class="form-horizontal">
                 <div class="form-group">
                    <table>
                     <tr>
-                     <td style="padding: 0 5px 0 0;"><input type="email" class="form-control" id="inputEmail3" placeholder="First Name" size="25"></td>
-                     <td style="padding: 0 0 0 5px;"><input type="email" class="form-control" id="inputEmail3" placeholder="Last Name" size="25"></td>
+                     <td style="padding: 0 5px 0 0;">
+                       <%= f.label :first_name, class: 'sr-only' %><br />
+                       <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %>
+                     </td>
+                     <td style="padding: 0 0 0 5px;">
+                       <%= f.label :last_name, class: 'sr-only' %><br />
+                       <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %>
+                     </td>
+
                     </tr>
                    </table>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" size="30">
+
+                  <%= f.label :email, class: 'sr-only' %><br />
+                  <%= f.text_field :email, class: 'form-control', placeholder: "Email address" %>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+
+                  <%= f.label :password , class: 'sr-only' %><br />
+                  <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Retype Password">
+                  <%= f.label :password_confirmation, class: 'sr-only' %><br />
+                  <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Retype Password" %>
                 </div>
 
                 <div class="form-group">
 
-                    <button type="submit" class="btn btn-default btn-warning">Sign Up for Betterly</button>
+                  <%= f.submit class: 'btn btn-primary', value: 'Sign Up' %>
 
                 </div>
               </form>
+              <% end %>
             </div>
 
           </div>

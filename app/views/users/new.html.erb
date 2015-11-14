@@ -14,6 +14,14 @@
                   </ul>
                 </div>
             <% end %>
+          <p>
+            <%= f.label :first_name, class: 'sr-only' %><br />
+            <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %>
+          </p>
+          <p>
+            <%= f.label :last_name, class: 'sr-only' %><br />
+            <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %>
+          </p>
             <p>
               <%= f.label :email, class: 'sr-only' %><br />
               <%= f.text_field :email, class: 'form-control', placeholder: "Email address" %>
