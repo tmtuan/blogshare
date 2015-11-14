@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'user_profile' => 'users#profile', :as => 'user_profile'
 
 
-  root :to => 'users#new'
+  root :to => 'pages#home'
 
   get 'home' => 'pages#home'
   resources :users
