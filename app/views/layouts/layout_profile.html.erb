@@ -32,9 +32,10 @@
 
       <ul class="nav">
         <li>
-          <i class="pe-7s-note2"></i>
-            <%= link_to "POSTS", posts_path %></p>
-
+          <%= link_to posts_path do %>
+              <i class="pe-7s-note2"></i>
+              <p>Posts</p>
+          <% end %>
         </li>
         <li class="active">
           <a href="user.html">
